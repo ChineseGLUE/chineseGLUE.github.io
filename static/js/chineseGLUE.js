@@ -66,7 +66,7 @@ layui.define(['element', 'form', 'table','laypage','jquery','laytpl'],function(e
   if(is_leader_board){
       console.log("加载排行榜...");
       $.ajax({
-            url:"http://106.13.187.75:8003/get_score/",
+            url:"https://106.13.187.75:8003/get_score/",
             type: "POST",
             data: {},
             async: true,
@@ -110,7 +110,7 @@ layui.define(['element', 'form', 'table','laypage','jquery','laytpl'],function(e
   if(is_data_set){
     console.log("异步加载数据集...");
     $.ajax({
-            url:"http://106.13.187.75:8003/get_data_set/",
+            url:"https://106.13.187.75:8003/get_data_set/",
             type: "POST",
             data: {},
             async: true,
@@ -127,7 +127,7 @@ layui.define(['element', 'form', 'table','laypage','jquery','laytpl'],function(e
                 if(obj["status"]){
                     var html = "";
                     for ( var i = 0; i < obj["data"].length; i++){
-                        var info = obj["data"][i]["desc"].replace("href=\"/download/","href=\"http://106.13.187.75:8003/download/");
+                        var info = obj["data"][i]["desc"].replace("href=\"/download/","href=\"https://106.13.187.75:8003/download/");
                         //console.log(info);
                         var s1 = '<div class="info-box"><div class="info-item"><img class="info-img" src="#" alt=""><div class="info-text"><p class="title count"><span class="name">' + obj["data"][i]["name"] + '</span><span class="info-img like"><i class="layui-icon layui-icon-praise"></i><em>' + obj["data"][i]["thumb_up_count"]  + '</em></span></p><p class="info-intr">' + info + '</div></div></div>';
                         html += s1;
@@ -231,7 +231,7 @@ layui.define(['element', 'form', 'table','laypage','jquery','laytpl'],function(e
         if(is_index){
             console.log("首页点赞");
             $.ajax({
-                url:"http://106.13.187.75:8003/thumb_up/",
+                url:"https://106.13.187.75:8003/thumb_up/",
                 type: "POST",
                 data: {},
                 async: true,
@@ -271,7 +271,7 @@ layui.define(['element', 'form', 'table','laypage','jquery','laytpl'],function(e
             var form_data = new FormData();
             form_data.append("data_set_name", data_set_name);
             $.ajax({
-                url:"http://106.13.187.75:8003/thumb_up_data_set/",
+                url:"https://106.13.187.75:8003/thumb_up_data_set/",
                 type: "POST",
                 data: form_data,
                 async: true,
@@ -344,7 +344,7 @@ layui.define(['element', 'form', 'table','laypage','jquery','laytpl'],function(e
 		return
 	}
 	$.ajax({
-        url:"http://106.13.187.75:8003/upload_score/",
+        url:"https://106.13.187.75:8003/upload_score/",
         type: "POST",
         data: form_data,
         async: true,
