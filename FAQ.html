@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chineseGLUE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/layui/css/layui.css">
+    <link rel="stylesheet" href="static/css/mian.css">
+</head>
+<body class="lay-chineseGLUE">
+<div class="header">
+    <div class="header-wrap">
+        <h1 class="logo pull-left">
+            <a href="index">
+                <span style="float:left;color:white;">CHINESE GLUE</span>
+            </a>
+        </h1>
+        <div class="chineseGLUE-nav pull-right">
+            <ul class="layui-nav pull-left">
+                <li class="layui-nav-item"><a href="index.html">首页</a></li>
+                <li class="layui-nav-item"><a href="leaderBorder.html">排行榜</a></li>
+                <li class="layui-nav-item"><a href="dataSet.html">数据集</a></li>
+                <li class="layui-nav-item layui-this"><a href="FAQ.html">FAQ</a></li>
+                <li class="layui-nav-item"><a href="about.html">关于</a></li>
+            </ul>
+            <a href="submit.html" class="personal pull-left">
+                <i class="layui-icon layui-icon-username"></i>
+            </a>
+        </div>
+        <div class="mobile-nav pull-right" id="mobile-nav">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-more"></i>
+            </a>
+        </div>
+    </div>
+    <ul class="pop-nav" id="pop-nav">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="leaderBorder.html">排行榜</a></li>
+        <li><a href="dataSet.html">数据集</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        <li><a href="about.html">关于</a></li>
+        <li><a href="submit.html">提交</a></li>
+    </ul>
+</div>
+<div class="container-wrap">
+    <div class="container container-message">
+        <div class="contar-wrap" id="contar-wrap">
+            <br>
+
+            <div class="layui-collapse" lay-accordion="">
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">目前支持哪些数据集</h2>
+                    <div class="layui-colla-content layui-show">
+                        <p>目前支持的数据集有 TNEWS、LCQMC、XNLI、INEWS，详细见<a href="dataSet">数据集</a></p>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">如何提交</h2>
+                    <div class="layui-colla-content">
+                        <p>提交点击 最后 <a href="submit">提交</a></p>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">提交格式有什么要求吗</h2>
+                    <div class="layui-colla-content">
+                        <p>为了方便，数据的格式为txt，提交评测时只需提交预测<b>label（分类标签）</b>
+                            对应的值（更改，前面文本片段都去除，只需要标签）</p>
+                        <br>
+                        <p>示例：</p>
+                        <br>
+                        <p>LCQMC：谁有狂三这张高清的<b>\t</b>这张高清图，谁有<b>\t</b>0<br>提交时，只需修改标签预测的值，即 预测 0/1；每个记录使用<span class="layui-badge layui-bg-cyan">\n</span>进行分割，预测后保存为txt格式<br>
+                        <blockquote class="layui-elem-quote layui-quote-nm">
+                            0 <span class="layui-badge layui-bg-cyan">\n</span><br>
+                            1 <span class="layui-badge layui-bg-cyan">\n</span><br>
+                            1 <span class="layui-badge layui-bg-cyan">\n</span><br>
+                        </blockquote>
+                        <br>提交时只会保留最好的成绩（<b>队伍名</b>和 <b>模型简称</b> 加以区分）</p>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">需要账户注册吗</h2>
+                    <div class="layui-colla-content">
+                        <p>目前不支持登入/注册，完全开放式的提交；不需要注册账户；系统使用 队伍名 和 模型简称 来进行排名</p>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title">排名</h2>
+                    <div class="layui-colla-content">
+                        <p>提交过程会对整个数据集进行综合打分，也可以对单个数据进行排序，只需点击排行榜页面数据集对应的列名即可。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div id="test1" class="paging"></div>-->
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p>
+        <span>&copy; 2019</span>
+        <span><a href="https://github.com/chineseGLUE/" target="_blank">chineseGLUE</a></span>
+        <span>MIT license</span>
+    </p>
+    <p><span>拥抱开源、支持开源</span></p>
+</div>
+</div>
+<script src="static/layui/layui.js"></script>
+<!--<script src="static/js/jquery-3.4.1.min.js"></script>-->
+<script>
+		layui.config({
+		  base: 'static/js/'
+		}).use('chineseGLUE');
+
+</script>
+
+</body>

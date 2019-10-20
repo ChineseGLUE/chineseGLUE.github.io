@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chineseGLUE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/layui/css/layui.css">
+    <link rel="stylesheet" href="static/css/mian.css">
+</head>
+<body class="lay-chineseGLUE">
+<div class="header">
+    <div class="header-wrap">
+        <h1 class="logo pull-left">
+            <a href="index">
+                <span style="float:left;color:white;">CHINESE GLUE</span>
+            </a>
+        </h1>
+        <div class="chineseGLUE-nav pull-right">
+            <ul class="layui-nav pull-left">
+                <li class="layui-nav-item  layui-this"><a href="index.html">首页</a></li>
+                <li class="layui-nav-item"><a href="leaderBorder.html">排行榜</a></li>
+                <li class="layui-nav-item"><a href="dataSet.html">数据集</a></li>
+                <li class="layui-nav-item "><a href="FAQ.html">FAQ</a></li>
+                <li class="layui-nav-item"><a href="about.html">关于</a></li>
+            </ul>
+            <a href="submit.html" class="personal pull-left">
+                <i class="layui-icon layui-icon-username"></i>
+            </a>
+        </div>
+        <div class="mobile-nav pull-right" id="mobile-nav">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-more"></i>
+            </a>
+        </div>
+    </div>
+    <ul class="pop-nav" id="pop-nav">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="leaderBorder.html">排行榜</a></li>
+        <li><a href="dataSet.html">数据集</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        <li><a href="about.html">关于</a></li>
+        <li><a href="submit.html">提交</a></li>
+    </ul>
+</div>
+<div class="container-wrap">
+    <div class="container container-message container-details container-about">
+        <div class="contar-wrap" id="index">
+            <div class="item">
+                <div class="item-box">
+
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+                        <legend>上传区域</legend>
+                    </fieldset>
+                    <form class="layui-form" style="">
+
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">队伍名</label>
+                                <div class="layui-input-inline">
+                                    <input type="tel" name="team_name" id="team_name" autocomplete="off"
+                                           class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">模型简称</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="model_name" id="model_name" autocomplete="off"
+                                           class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+
+                            <div class="layui-inline">
+                                <label class="layui-form-label">url</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="model_name" id="url" autocomplete="off"
+                                           class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">任务</label>
+                                <div class="layui-input-block">
+                                    <select name="interest" style="width: 190px;" id="data_set">
+                                        <!--<option value=""></option>-->
+                                        <option value="3" style="width: 190px;">TNEWS</option>
+                                        <option value="1" selected="" style="width: 190px;">LCQMC</option>
+                                        <option value="2" style="width: 190px;">XNLI</option>
+                                        <option value="4" style="width: 190px;">INEWS</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">测试文件</label>
+                            <div class="layui-input-block">
+                                <input type="file" class="layui-icon" id="file_name" name="file" id="test20">
+                            </div>
+                        </div>
+
+
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <!--onclick="upload();"-->
+                                <button type="button" class="layui-btn" lay-filter="demo1" id="submit">立即提交
+                                </button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<
+<div class="footer">
+    <p>
+        <span>&copy; 2019</span>
+        <span><a href="https://github.com/chineseGLUE/" target="_blank">chineseGLUE</a></span>
+        <span>MIT license</span>
+    </p>
+    <p><span>拥抱开源、支持开源</span></p>
+</div>
+<script src="static/layui/layui.js">
+
+
+</script>
+<!--<script src="static/js/jquery-3.4.1.min.js"></script>-->
+<script>
+		layui.config({
+		  base: 'static/js/'
+		}).use('chineseGLUE');
+
+
+
+</script>
+</body>
+</html>

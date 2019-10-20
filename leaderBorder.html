@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chineseGLUE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/layui/css/layui.css">
+    <link rel="stylesheet" href="static/css/mian.css">
+</head>
+<body class="lay-chineseGLUE">
+<div class="header">
+    <div class="header-wrap">
+        <h1 class="logo pull-left">
+            <a href="index">
+                <span style="float:left;color:white;">CHINESE GLUE</span>
+            </a>
+        </h1>
+        <div class="chineseGLUE-nav pull-right">
+            <ul class="layui-nav pull-left">
+                <li class="layui-nav-item"><a href="index.html">首页</a></li>
+                <li class="layui-nav-item layui-this"><a href="leaderBorder.html">排行榜</a></li>
+                <li class="layui-nav-item"><a href="dataSet.html">数据集</a></li>
+                <li class="layui-nav-item "><a href="FAQ.html">FAQ</a></li>
+                <li class="layui-nav-item"><a href="about.html">关于</a></li>
+            </ul>
+            <a href="submit.html" class="personal pull-left">
+                <i class="layui-icon layui-icon-username"></i>
+            </a>
+        </div>
+        <div class="mobile-nav pull-right" id="mobile-nav">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-more"></i>
+            </a>
+        </div>
+    </div>
+    <ul class="pop-nav" id="pop-nav">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="leaderBorder.html">排行榜</a></li>
+        <li><a href="dataSet.html">数据集</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        <li><a href="about.html">关于</a></li>
+        <li><a href="submit.html">提交</a></li>
+    </ul>
+</div>
+<div class="container-wrap">
+    <div class="container container-message">
+        <!--<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">-->
+        <!--<legend>排行榜</legend>-->
+        <!--</fieldset>-->
+
+        <table class="layui-hide" id="leader_board"></table>
+    </div>
+</div>
+<div class="footer">
+    <p>
+        <span>&copy; 2019</span>
+        <span><a href="https://github.com/chineseGLUE/" target="_blank">chineseGLUE</a></span>
+        <span>MIT license</span>
+    </p>
+    <p><span>拥抱开源、支持开源</span></p>
+</div>
+</div>
+<script src="static/layui/layui.js">
+
+</script>
+<!--<script src="static/js/jquery-3.4.1.min.js"></script>-->
+
+<script>
+		layui.config({
+		  base: 'static/js/'
+		}).use('chineseGLUE');
+</script>
+
+</body>
